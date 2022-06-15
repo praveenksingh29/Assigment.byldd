@@ -1,0 +1,742 @@
+:root {
+    --pi: 3.14159265359;
+    --a1: 60;
+    --a2: 25;
+    --a3: 10;
+    --a4: 5;
+  }
+body{
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: 'Poppins' sans-serif;
+    background: #ECECFF;
+}
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.section{
+    min-height: 100vh;
+    display: block;
+    padding: 0 20px;
+    opacity: 1;
+    position: absolute;
+    left: 250px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+.padd-15{
+    margin-left: 25px;
+}
+::before, ::after{
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+/* Aside */
+.aside{
+    width: 250px;
+    background: #0F143D;
+    position: fixed;
+    left: 0;
+    padding: 0px;
+    top: 0;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+.aside .logo{
+    position: absolute;
+    max-width: 100%;
+    display: flex;
+    top: 30px;
+    left:30px;
+    text-align: center;
+}
+.aside .logo .icon{
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.aside .logo .icon img{
+    margin: auto;
+    padding: 0px 10px;
+    height: 30px;
+}
+.aside .logo .logo-name{
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+.aside .logo .logo-name a{
+    color: white;
+    padding: 15px 10px;
+    font-weight: 700;
+    font-family: sans-serif;
+    font-size: 20px;
+    position: relative;
+}
+.aside .logo .logo-name a span{
+    color: #A7A7A7;
+}
+.aside .nav{
+    margin-top: -100px;
+   
+}
+.aside .nav li{
+    margin-top: 10px;
+    display: block;
+    height: 50px;
+    /* background-color: red; */
+    /* padding: 12px 40px; */
+    
+}
+.aside .nav li a{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: white;
+    padding: 20px 45px;
+    
+}
+.aside .nav li a i{
+   padding-right: 40px;
+    
+}
+.aside .nav li .active{
+    background-image: linear-gradient(to right, #EE837F , #F2A3A1);
+    border-radius: 5px;
+}
+/* Dashboard */
+.container{
+    max-width: 1600px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+.section .container{
+    padding-top: 20px;
+    padding-bottom: 70px;
+}
+.dashboard .container .row-left{
+    
+    flex: 0 0 70%;
+    max-width: 75%;
+}
+.dashboard .container .row-left .top{
+    display: flex;
+}
+.dashboard .container .row-left .top .title{
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+.dashboard .container .row-left .top .title h2{
+    padding: 15px 5px;
+    font-family: sans-serif;
+}
+.dashboard .container .row-left .top .search{
+    
+    flex: 0 0 60%;
+    max-width: 60%;
+    text-align: right;
+}
+.dashboard .container .row-left .top .search .input-icon{
+    position: relative;
+    margin-right: 30px;
+    padding: 15px 10px;
+}
+.dashboard .container .row-left .top .search .input-icon input{
+    height: 40px;
+    width: 70%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.dashboard .container .row-left .top .search .input-icon i{
+    position: absolute;
+    padding: 12px;
+    right: 20px;
+    color: #A7A7A7;
+}
+.dashboard .container .row-left .user{
+    display: flex;
+}
+.dashboard .container .row-left .user .user-icon{
+    flex: 0 0 12%;
+    max-width: 12%;
+    padding: 5px 5px;
+}
+.dashboard .container .row-left .user .user-icon img{
+    height: 80px;
+    
+}
+.dashboard .container .row-left .user .user-name{
+    flex: 0 0 90%;
+    max-width: 90%;
+}
+.dashboard .container .row-left .user .user-name{
+    padding: 15px 20px;
+}
+.dashboard .container .row-left .user .user-name h3{
+    font-family: sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+}
+.dashboard .container .row-left .user .user-name h3 span{
+    font-weight: bold;
+}
+.dashboard .container .row-left .user .user-name p{
+    font-family: sans-serif;
+    color: #A7A7A7;
+    font-size: 14px;
+}
+.dashboard .container .row-left .count{
+    display: flex;
+}
+.dashboard .container .row-left .count .count-item{
+    margin-top: 20px;
+    flex: 0 0 22%;
+    max-width: 22%;
+}
+.dashboard .container .row-left .count .count-item .count-item-inner{
+    display: flex;
+    padding: 15px 10px;
+    text-align: center;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+.dashboard .container .row-left .count .count-item .count-item-inner:hover{
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+.dashboard .container .row-left .count .count-item .count-item-inner .icon{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    /* background-color: #0F143D; */
+    background-image: linear-gradient(#0F143D, #454EA3);
+}
+.dashboard .container .row-left .count .count-item .count-item-inner .icon .fa-solid{
+    font-size: 25px;
+    line-height: 70px;
+    color: white;
+    transition: all 0.3s ease;
+}
+.dashboard .container .row-left .count .count-item .count-item-inner:hover .icon .fa-solid{
+    font-size: 18px;
+}
+.dashboard .container .row-left .count .count-item .count-item-inner .count-text{
+    /* flex: 0 0 60%;
+    max-width: 60%; */
+    margin-left: 10px;
+}
+.dashboard .container .row-left .count .count-item .count-item-inner .count-text p{
+    font-size: 10px;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: #A7A7A7;
+}
+.dashboard .container .row-left .count .count-item .count-item-inner .count-text h4{
+    font-size: 24px;
+    font-weight: 800;
+    font-family: sans-serif;
+    color: #0F143D;
+}
+.dashboard .container .row-left .accounting{
+    display: flex;
+    min-height: 420px;
+    max-width: 97%;
+    margin-top: 30px;
+    background-color: white;
+}
+.dashboard .container .row-left .accounting .accounting-inner{
+    padding: 15px 20px;
+}
+.dashboard .container .row-left .accounting .accounting-inner section{
+    margin-top: 20px;
+}
+.dashboard .container .row-left .accounting .accounting-inner section .box{
+    width: 750px;
+    position: absolute;
+    height: 300px;
+    background-color: red;
+    /* top: 50%;
+    left: 50%; */
+    transform: translateX(-50%, -50%);
+    background: transparent;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+    display: flex;
+    
+}
+.dashboard .container .row-left .accounting .accounting-inner section .box .earn{
+    position: relative;
+    flex: 1;
+    text-align: center;
+}
+.dashboard .container .row-left .accounting .accounting-inner section .box .earn .graph{
+    position: absolute;
+    width: 40px;
+    /* background-color: rgba(0,0,0,1); */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.dashboard .container .row-left .accounting .accounting-inner section .box .earn .graph:before{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 0;
+    text-decoration: none;
+    background: linear-gradient(0deg, #8689AE, #0F143D);
+}
+.dashboard .container .row-left .accounting .accounting-inner section .box .earn .graph::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,.1);
+}
+.dashboard .container .row-left .accounting .accounting-inner section .box .earn .graph .percent{
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #0F143D;
+    font-weight: bold;
+}
+.dashboard .container .row-left .accounting .accounting-inner section .box .earn .name{
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.dashboard .container .row-left .accounting .accounting-inner .text{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.dashboard .container .row-left .accounting .accounting-inner .text h4{
+    font-size: 16px;
+    font-weight: 800;
+    font-family: sans-serif;
+    color: #0F143D
+}
+.dashboard .container .row-left .accounting .accounting-inner .text p{
+    font-size: 12px;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: #A7A7A7;
+}
+.dashboard .container .row-left .projects{
+    display: flex;
+    min-height: 200px;
+    max-width: 97%;
+    margin-top: 30px;
+    background-color: white;
+}
+.dashboard .container .row-left .projects .project-inner{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.dashboard .container .row-left .projects .project-inner .project-text{
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 15px 20px;
+}
+.dashboard .container .row-left .projects .project-inner .project-text .text{
+    flex: 0 0 95%;
+    max-width: 95%;
+}
+.dashboard .container .row-left .projects .project-inner .project-text .text h4{
+    font-size: 16px;
+    font-weight: 800;
+    font-family: sans-serif;
+    color: #0F143D
+}
+.dashboard .container .row-left .projects .project-inner .project-text .text p{
+    font-size: 12px;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: #A7A7A7;
+}
+.dashboard .container .row-left .projects .project-inner .project-text i{
+    flex: 0 0 5%;
+    max-width: 5%;
+    margin-top: 10px;
+    text-align: center;
+    color: #0F143D;
+}
+.dashboard .container .row-left .projects .project-inner .project-table{
+    padding: 10px 20px;
+}
+.dashboard .container .row-left .projects .project-inner .project-table table{
+    border-collapse: separate;
+    width:100%;
+    text-align: left;
+    font-family: sans-serif;
+    font-size: 14px;    
+}
+.dashboard .container .row-left .projects .project-inner .project-table table tr{
+    line-height: 50px;
+}
+.dashboard .container .row-left .projects .project-inner .project-table table tr .button{
+    background-color: #0F143D;
+    border-radius: 10px;
+    height: 40px;
+    width: 100px;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+}
+.dashboard .container .row-left .projects .project-inner .project-table table tr .button1{
+    border:3px solid #0F143D;
+    background-color: white;
+    border-radius: 10px;
+    height: 40px;
+    width: 100px;
+    color: #0F143D;
+    text-align: center;
+    font-weight: 700;
+}
+.dashboard .container .row-right{
+    flex: 0 0 30%;
+    max-width: 30%;
+    padding: 10px;
+    /* background-color: blue; */
+}
+.dashboard .container .row-right .profile{
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+.dashboard .container .row-right .profile .icon{
+    position: relative;
+    flex: 0 0 20%;
+    padding: 5px 8px;
+    max-width: 20%;
+}
+.dashboard .container .row-right .profile .icon img{
+    height: 50px;
+}
+.dashboard .container .row-right .profile .icon .dot{
+    position: absolute;
+    right:8px;
+    bottom: 8px;
+    z-index: 1;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: green;
+}
+.dashboard .container .row-right .profile .text{
+    flex: 0 0 60%;
+    padding: 8px 10px;
+}
+.dashboard .container .row-right .profile .text h2{
+    font-size: 18px;
+    font-weight: 750;
+    font-family: sans-serif;
+    color: #0F143D;
+}
+.dashboard .container .row-right .profile .text p{
+    font-size: 14px;
+    font-weight: 750;
+    font-family: sans-serif;
+    color: #A7A7A7;
+}
+.dashboard .container .row-right .profile .bell{
+    flex: 0 0 20%;
+    max-width: 20%;
+    padding: 8px 8px;
+}
+.dashboard .container .row-right .profile .bell .bell-inner{
+    position: relative;
+    padding: 0px 13px;
+    height:50px;
+    width:50px;
+    background-color: #ECECFF;
+    border-radius: 50%;
+}
+.dashboard .container .row-right .profile .bell .bell-inner .fa-solid{
+    position: absolute;
+    font-size: 25px;
+    line-height: 50px;
+    color: #0F143D;
+}
+.dashboard .container .row-right .profile .bell .bell-inner .dot{
+    position: absolute;
+    top:0px;
+    right: 0px;
+    z-index: 1;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #EE837F;
+}
+.dashboard .container .row-right .profile .bell .bell-inner .dot p{
+    position: absolute;
+    line-height: 20px;
+    left: 6px;
+    font-size: 14px;
+    font-family: sans-serif;
+    color: white;
+}
+.dashboard .container .row-right .pi{
+    margin-top: 30px;
+    padding: 10px;
+    height: 220px;
+    background-color:white;
+    border-radius: 5px;
+}
+.dashboard .container .row-right .pi .pi-text{
+    font-size: 22px;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+  
+.dashboard .container .row-right .pi .row{
+   display: flex;
+   flex: wrap;
+   
+}
+.dashboard .container .row-right .pi .row .pi-left{
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+.dashboard .container .row-right .pi .row .pi-amount .withdraw{
+    position: relative;
+    display: flex;
+}
+.dashboard .container .row-right .pi .row .pi-amount .withdraw .dot{
+    position: absolute;
+    top:20px;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    z-index: 1;
+    background-color: #EE837F;
+}
+.dashboard .container .row-right .pi .row .pi-amount .withdraw .dot-1{
+    position: absolute;
+    top:20px;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    z-index: 1;
+    background-color: #0F143D;
+}
+.dashboard .container .row-right .pi .row .pi-amount .withdraw p{
+    /* display: block; */
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.dashboard .container .row-right .pi .row .pi-right{
+    flex: 0 0 60%;
+    max-width: 60%;
+
+}
+.dashboard .container .row-right .pi .row .pi-right .pi-chart .pi-chart-outer{
+    margin-left: 10px;
+    height: 200px;
+    width: 200px;
+    position: relative;
+}
+.dashboard .container .row-right .pi .row .pi-right .pi-chart .pi-chart-outer .outer{
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+                -6px -6px 10px -1px rgba(255,255,255,0.9);
+}
+.dashboard .container .row-right .pi .row .pi-right .pi-chart .pi-chart-outer .outer .inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+                inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+                -0.5px -0.5px 0px rgba(255,255,255,1),
+                0.5px 0.5px 0px rgba(0,0,0,0.15),
+                0px 12px 10px -10px rgba(0,0,0,0.2);
+
+}
+.dashboard .container .row-right .pi .row .pi-right .pi-chart .pi-chart-outer .outer .inner #number{
+    font-family: sans-serif;
+    font-size: 22px;
+    font-weight: 700px;
+    color: #555;
+}
+.dashboard .container .row-right .pi .row .pi-right .pi-chart .pi-chart-outer svg circle{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 200;
+}
+.dashboard .container .row-right .pi .row .pi-right .pi-chart .pi-chart-outer .svg-2 svg circle{
+    fill: none;
+    stroke: url(#GradientColor1);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 370;
+}
+.dashboard .container .row-right .pi .row .pi-right .pi-chart .pi-chart-outer svg{
+    position: absolute;
+    top:0;
+    left:0;
+}
+.dashboard .container .row-right .pi .row .pi-right .pi-chart .pi-chart-outer .svg-2{
+    /* position: relative; */
+    background-color: red;
+}
+.dashboard .container .row-right .pi .row .pi-right .pi-chart .pi-chart-outer .svg-2 svg{
+    position: absolute;
+    bottom: 500px;
+   
+}
+.dashboard .container .row-right .cal{
+    margin-top: 30px;
+    padding: 20px 15px;
+    background-color: white;
+    border-radius: 5px;
+}
+.dashboard .container .row-right .cal .text h1{
+    font-family: sans-serif;
+    font-weight: 700px;
+    color: #0F143D;
+}
+.dashboard .container .row-right .row{
+     display: flex;
+     margin-top: 10px;
+}
+.dashboard .container .row-right .cal .row .cal-day{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 10px;
+    display: flex;
+    /* background-color: red; */
+}
+.dashboard .container .row-right .cal .row .cal-day .cal-date{
+    flex: 0 0 18%;
+    max-width: 18%;
+    padding: 10px 0px;
+    background-color: #ECECFF;
+    border-radius: 8px;
+}
+.dashboard .container .row-right .cal .row .cal-day .cal-date-main{
+    flex: 0 0 18%;
+    max-width: 18%;
+    padding: 10px 0px;
+    background-color: #0F143D;
+    box-shadow: 0 0 30px rgba(48, 46, 77, 0.5);
+    border-radius: 8px;
+}
+.dashboard .container .row-right .cal .row .cal-day .cal-date-main h2{
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 700px;
+    color: white;
+    text-align: center;
+}
+.dashboard .container .row-right .cal .row .cal-day .cal-date h2{
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 700px;
+    color: #0F143D;
+    text-align: center;
+}
+.padd-16{
+    margin-left: 8px;
+}
+.dashboard .container .row-right .cal .line{
+    position: relative;
+    height:3px;
+    width: 100%;
+    margin-top: 20px;
+    background-color: #A7A7A7;
+}
+.dashboard .container .row-right .cal .line .line-2{
+    position: absolute;
+    margin-left: 40%;
+    height: 3px;
+    width: 20%;
+    background-color: #0F143D;
+}
+.dashboard .container .row-right .cal .time{
+    margin-top: 20px;
+    display: flex;
+}
+.dashboard .container .row-right .cal .time .text{
+    flex: 0 0 15%;
+    max-width: 15%;
+}
+.dashboard .container .row-right .cal .time .text h2{
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 700px;
+    color: #A7A7A7;
+}
+.dashboard .container .row-right .cal .time .line-text-1{
+    flex: 0 0 80%;
+    max-width: 80%;
+    margin-left: 10px;
+    border-radius: 5px;
+    display: flex;
+    background-image: linear-gradient(to right, #EE837F , #F2A3A1);
+}
+.dashboard .container .row-right .cal .time .line-text-1 .icon{
+    position: relative;
+    flex: 0 0 20%;
+    max-width: 20%;
+    margin: 10px;
+    border-radius: 50%;
+    background-color: white;
+}
+.dashboard .container .row-right .cal .time .line-text-1 .icon i{
+    position: absolute;
+    font-size: 20px;
+    left: 14px;
+    line-height: 56px;
+    color: #0F143D;
+}
+.dashboard .container .row-right .cal .time .line-text-1 .text{
+    flex: 0 0 70%;
+    max-width: 70%;
+    /* background-color: red */
+}
+.dashboard .container .row-right .cal .time .line-text-1 .text h3{
+    margin-top: 5px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 800px;
+    color: white;
+}
+.dashboard .container .row-right .cal .time .line-text-1 .text p{
+    margin: 5px;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: 600px;
+    color: white;
+}
