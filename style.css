@@ -251,6 +251,7 @@ ul{
     color: #0F143D;
 }
 .dashboard .container .row-left .accounting{
+    position: relative;
     display: flex;
     min-height: 420px;
     max-width: 97%;
@@ -261,13 +262,16 @@ ul{
     padding: 15px 20px;
 }
 .dashboard .container .row-left .accounting .accounting-inner section{
+    position: absolute;
     margin-top: 20px;
+    display: flex;
+    max-width: 100%;
 }
 .dashboard .container .row-left .accounting .accounting-inner section .box{
-    width: 750px;
-    position: absolute;
+    flex: 0 0 100%;
+    width: 700px;
+    /* position: absolute; */
     height: 300px;
-    background-color: red;
     /* top: 50%;
     left: 50%; */
     transform: translateX(-50%, -50%);
@@ -739,4 +743,46 @@ ul{
     font-family: sans-serif;
     font-weight: 600px;
     color: white;
+}
+@media (max-width:1364px){
+    .dashboard .container .row-left .accounting .accounting-inner section .box{
+        width: 650px;
+    }
+    .dashboard .container .row-left .count .count-item .count-item-inner .icon{
+        margin-top: 10px ;
+        height: 50Px;
+        width: 50px;
+    }
+    .dashboard .container .row-left .count .count-item .count-item-inner .icon .fa-solid{
+        font-size: 20px;
+        line-height: 50px;
+    }
+    .dashboard .container .row-right .pi .row .pi-right{
+        flex: 0 0 70%;
+        max-width: 70%;
+    }
+    .dashboard .container .row-right .pi .row .pi-left{
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+}
+@media (max-width:1364px){
+    .aside{
+        /* width: 200px; */
+    }
+    .aside .nav{
+        margin-top: 0;
+    }
+    .dashboard .container .row-left .accounting .accounting-inner section .box{
+        width: 600px;
+    }
+    .dashboard .container .row-right .profile .bell{
+        padding: 2px 2px;;
+    }
+    .dashboard .container .row-right .profile .text h2{
+        font-size: 14px;
+    }
+    .dashboard .container .row-right .profile .text p{
+        font-size: 12px;
+    }
 }
